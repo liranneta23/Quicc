@@ -32,16 +32,17 @@ route.post('/purchase', async (req, res) => {
         let newPurchase = {}
         newPurchase.itemsPurchased = [];
 
-        for (var i=0; i<purchasedItems.length-1; i++) {
+        console.log("HERE", newPurchase.itemsPurchased);
+
+        for (var i=0; i<purchasedItems.length; i++) {
             newPurchase.itemsPurchased.push(purchasedItems[i]);
         }
 
-        //let purchaseModel = new Purchases(newPurchase);
-        //await purchaseModel.save();
+        let purchaseModel = new Purchases(newPurchase);
+        await purchaseModel.save();
 
         res.send({
             status: 200,
-            purchases: allPurchases,
         })
     } catch (err) {
         console.log('error');
