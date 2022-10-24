@@ -77,7 +77,7 @@ route.get('/fastestLane', async (req, res) => {
 
         res.send({
             status: 200,
-            fastestLane: fastestLane
+            fastestLane: fastestLane.laneNumber
         })
     } catch (err) {
         console.log('error trying to add thougth');

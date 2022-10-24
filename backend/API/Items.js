@@ -5,10 +5,10 @@ const route = express.Router();
 
 route.get('/items', async (req, res) => {
     try {
-        console.log("GET SHOPPING LIST");
+        console.log("GET ALL ITEMS IN THE STORE");
 
         const allItems = await Items.find()
-        console.log("all items: ", allItems);
+        //console.log("all items: ", allItems);
 
         res.send({
             status: 200,

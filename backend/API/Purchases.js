@@ -25,14 +25,12 @@ route.get('/purchases', async (req, res) => {
 
 route.post('/purchase', async (req, res) => {
     try {
-        const {purchasedItems} = req.body;
+        let {purchasedItems} = req.body;
 
         console.log("THE USER COMMPLETED A NEW GROCERIES SHOPPING, OF: ", purchasedItems);
         
         let newPurchase = {}
         newPurchase.itemsPurchased = [];
-
-        console.log("HERE", newPurchase.itemsPurchased);
 
         for (var i=0; i<purchasedItems.length; i++) {
             newPurchase.itemsPurchased.push(purchasedItems[i]);
