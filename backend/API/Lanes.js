@@ -4,9 +4,6 @@ const Lanes = require('../DB/Lanes');
 const route = express.Router();
 
 
-
-
-
 route.get('/lanes', async (req, res) => {
     try {
         console.log("GET ALL LANES");
