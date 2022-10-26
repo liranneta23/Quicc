@@ -46,27 +46,6 @@ route.post('/item', async (req, res) => {
     }
 })
 
-
-route.get('/getRecommendedItems', async (req, res) => {
-    try {
-        console.log("GET SHOPPING LIST");
-
-        const allItems = await Items.find()
-        console.log("all items: ", allItems);
-
-        res.send({
-            status: 200,
-            items: allItems,
-        })
-    } catch (err) {
-        console.log('error');
-        res.send({
-            status: 400,
-            message: err
-        })
-    }
-})
-
 route.get('/getPostById/:id', async (req, res) => {
     try {
         const findId = req.params.id
