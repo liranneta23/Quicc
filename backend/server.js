@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(require('./API/Items'))
 app.use(require('./API/Lanes'))
 app.use(require('./API/Purchases'))
+app.use(require('./API/Recommendations'))
 app.use(require('./API/Users'))
 
 
