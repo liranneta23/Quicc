@@ -8,8 +8,8 @@ const express = require('express'); //Import the express dependency
 const app = express();              //Instantiate an express app, the main work horse of this server
 
 // initalize server
-const ip = process.env.IP;
-const port = process.env.PORT; //Save the port number where your server will be listening
+const ip = "192.168.1.9";
+const port = 3000 //Save the port number where your server will be listening
 
 const connectDB = require('./DB/connection');
 
@@ -27,7 +27,7 @@ app.use(require('./API/Users'))
 
 
 // initalize connections (server & DB)
-connectDB(process.env.URI);
+connectDB("mongodb+srv://quicc:Ni75sbXJNI0sZWQw@cluster0.0cpqzhx.mongodb.net/quicc-db?retryWrites=true&w=majority");
 
 
 app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
