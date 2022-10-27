@@ -4,7 +4,7 @@ const recommendations = mongoose.Schema({
     item: {
         type: String
     },
-    recommendations:
+    recommendation_list:
     [
         {
             type: String
