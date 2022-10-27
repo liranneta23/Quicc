@@ -4,7 +4,13 @@ const items = mongoose.Schema({
     name :{
         type: String
     },
-    location :{
+    from :{
+        type: String
+    },
+    to :{
+        type: String
+    },
+    percent :{
         type: String
     },
 });
